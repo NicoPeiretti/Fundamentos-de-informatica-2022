@@ -1,1 +1,1 @@
-# Fundamentos-de-informatica-2022*
+# Fundamentos-de-informatica-22
