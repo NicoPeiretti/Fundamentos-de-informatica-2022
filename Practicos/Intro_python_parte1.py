@@ -34,7 +34,7 @@ def sueldo(base, ventas):
 
 # EJERCICIO 8
 def nota_final(respuestas): 
-  resultado = 0 
+  resultado = 0  
   for respuesta in respuestas: 
     if respuesta == "correcta": 
       resultado += 4

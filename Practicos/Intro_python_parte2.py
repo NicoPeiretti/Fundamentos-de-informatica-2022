@@ -1,7 +1,7 @@
 # EJERCICIO 1 (condicionales)
-str = input("Ingrese una palabra o una frase: ")
-cap = str.capitalize() #sino puedo usar str.isupper[0]
-if str == cap: 
+string = input("Ingrese una palabra o una frase: ")
+cap = string.capitalize() #sino puedo usar str.isupper[0]
+if string == cap: 
   print("la primer letra es mayúscula.")
 else: 
   print("la primer letra es minúscula")
@@ -26,7 +26,7 @@ else:
 # EJERCICIO 3 (condicionales)
 num = int(input("Escribí un número del 1 al 6: "))
 if  num >= 1 or num <= 6: 
-  print("la cara opuesta del dado es ") + str(7 - num)
+  print("la cara opuesta del dado es: " + str(7 - num))
 else: 
   print("el número ingresado es incorrecto") 
 
