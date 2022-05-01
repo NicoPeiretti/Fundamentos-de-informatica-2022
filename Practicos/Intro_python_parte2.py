@@ -137,9 +137,19 @@ def esMultiplo(n1, n2):
     print('Los números que ingresaste no son múltiplos entre sí')
 
 # EJERCICIO 14 (funciones)
-#No me sale
+def temperatura_media(temperatura_max, temperatura_min):
+  media = int((temperatura_max) + int(temperatura_min))/2
+  print('La temperatura media es ', media, 'grados')
+
+dias = int(input('Ingrese la cantidad de dias: '))
+contador = 0 
+while contador < dias:
+    max = int(input('Ingrese la temperatura maxima: '))
+    min = int(input('Ingrese la temperatura minima: '))
+    temperatura_media(max, min)
+    contador += 1
 # EJERCICIO 15 (funciones)
 socios_activos = {1: ["Florencia Ocampo", "14092001", True], 2: ["David Estévez", "14092001", True], 3: ["Sofía Cáceres", "14092001", True]}
-
-len(socios_activos) 
-#No me salen
+print('socios_activos: ' + str(len(socios_activos)))
+numero_de_socio = int(input('Ingrese el numero del socio: '))
+print(socios_activos[numero_de_socio][2])
