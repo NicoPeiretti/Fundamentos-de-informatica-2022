@@ -1,5 +1,5 @@
-import re
 #Ejercicio 1:
+import re
 string = 'eidjncjdenjvfjvb1234'
 re.search('\w', string)
 
@@ -12,3 +12,14 @@ re.search('\W', string)
 import re
 cadena = 'helena'
 print(re.search('he(.*)', cadena))
+
+#Ejercicio 4:
+import re
+string = "Defíni la función aprobar_materias"
+patron = '\w' + '_' + '\w'
+re.search(patron, string)
+
+#Ejercicio 5:
+import re
+string = '093493niwonffonwodf'
+re.search

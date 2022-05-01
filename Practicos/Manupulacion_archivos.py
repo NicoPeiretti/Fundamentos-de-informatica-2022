@@ -43,6 +43,15 @@ with open('otroArchivo', 'a') as f:
         f.write(i) 
 
 # EJERCICIO 6 
+with open('nombreArchivo', 'r') as file:
+    fileContent = file.readlines()
+
+for fileline in fileContent:
+    fileline = fileline.remove('\n')
+
+with open('otroArchivo', 'a') as f:
+    for i in fileContent:
+        f.write(i)
 
 # EJERCICIO 7 
 def palabra_mas_larga(archivo): 

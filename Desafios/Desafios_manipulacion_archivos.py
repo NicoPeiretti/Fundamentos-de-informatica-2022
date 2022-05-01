@@ -15,4 +15,8 @@ with open('bio.txt', 'w') as miarch:
 
 #Desafio 4:
 leer_archivo = open('manipulacion_archivos.txt', 'r')
-leer_archivo.readlines()
+print(leer_archivo.readlines())
+
+with open('manipulacion_archivos.txt', 'r') as archivo:
+    print(archivo.readlines())
+
