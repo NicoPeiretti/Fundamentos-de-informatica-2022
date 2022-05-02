@@ -220,3 +220,4 @@ class AvesNoVoladoras:
     return True
 
 # EJERCICIO 3
+#Desde el punto de vista del entrenador no son polimorifcas, y para solucionarlo habria que poner en la clase entrenador las aves no voladoras.
