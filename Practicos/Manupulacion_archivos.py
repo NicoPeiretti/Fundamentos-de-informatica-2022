@@ -1,13 +1,15 @@
 # EJERCICIO 1: Realizá un programa que lea un archivo e imprima cuántas líneas de ese archivo no empiezan con una determinada letra 
 # (por ejemplo que imprima cuántas líneas no empiezan con "P").
-with open('nombreArchivo', 'r') as file: 
-    fileContent = file.readlines()
+def funcion_1(archivo, letra):
+    with open(archivo, 'r') as file: 
+        fileContent = file.readlines()
+    for fileline in fileContent: 
+        noEmpiezaCon = 0 
+        if not str.startswith(fileline, letra): 
+            noEmpiezaCon += 1
+        print(noEmpiezaCon) 
 
-for fileline in fileContent: 
-    noEmpiezaCon = 0 
-    if not str.startswith(fileline, 'P'): 
-        noEmpiezaCon += 1
-    print(noEmpiezaCon) 
+funcion_1('manipulacion_archivos.txt', 'H')
 
 # EJERCICIO 2: Escribí un programa que lea un archivo e imprima las primeras n líneas.
 with open('nombreArchivo', 'r') as file: 
@@ -37,26 +39,32 @@ funcion_4('bio.txt')
 
 # EJERCICIO 5:Escribí un programa que lea un archivo, reemplace una letra por esa misma letra más un salto de línea y 
 # lo guarde en otro archivo.
-with open('nombreArchivo', 'r') as file: 
-    fileContent = file.readlines()
+def funcion_5(archivo, letra, otro_archivo):
+    with open(archivo, 'r') as file: 
+        archivo = file.readlines()
+    for fileline in archivo: 
+        reemplazo = fileline.replace(letra, letra + '\n')
+    with open(otro_archivo, 'a') as f: 
+        for i in otro_archivo:
+            f.write(reemplazo) 
 
-for fileline in fileContent: 
-    fileline = fileline.replace('w', 'w \n')
-
-with open('otroArchivo', 'a') as f: 
-    for i in fileContent:
-        f.write(i) 
+funcion_5('nombreArchivo', 'n', 'bio.txt')
 
 # EJERCICIO 6: Realizá un programa que lea un archivo, elimine todos los saltos de línea y lo guarde en otro archivo.
-with open('nombreArchivo', 'r') as file:
-    fileContent = file.readlines()
+import re
 
-for fileline in fileContent:
-    fileline = fileline.remove('\n')
+def funcion_6(archivo, otro_archivo):
+    with open(archivo, 'r') as arch:
+        contenido = arch.read()
+        re.findall("\n", contenido)
+        pegar = contenido.replace("\n", '')
+        with open(otro_archivo, 'w') as otro: 
+            otro.write(pegar)
 
-with open('otroArchivo', 'a') as f:
-    for i in fileContent:
-        f.write(i)
+archivo = (r'C:\Users\Nico\Fundamentos-de-informatica-2022\Practicos\manipulacion_archivos.txt') 
+otro_archivo = (r'C:\Users\Nico\Fundamentos-de-informatica-2022\Practicos\bio.txt')
+
+funcion_6(archivo, otro_archivo)
 
 # EJERCICIO 7: Escribí un porgrama que lea un archivo e identifique la palabra más larga, la cual debe imprimir y 
 # decir cuantos caracteres tiene. 
@@ -97,3 +105,18 @@ def join_files(file1, file2, file3):
         f3.write(f1.read() + f2.read())
 
 join_files('documento1', 'documento2', 'documento3')
+
+'''
+import glob
+import os 
+def function1(archivo, ruta): 
+    os.chdir(ruta)
+    lista_txt = glob.glob('*.text') 
+    
+    with open(archivo, 'a') as s: 
+        for f in lista_txt: 
+            file = open(f, 'r')
+            s.write(file.read())
+            file.close()'''
+# ('*.text') es cualq cosa que le siga '.txt
+# si quiero hacer que empiece con es (empieceCon*)
