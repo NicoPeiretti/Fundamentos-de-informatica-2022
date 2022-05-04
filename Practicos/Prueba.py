@@ -1,5 +1,8 @@
-with open('nombreArchivo', 'w') as file:
-    file.write('Pedazo njvjfnvjenfv\n Master\n Crack')
+import re
+string = input("escriba algo: ")
+patron = '\d{0,}'
+def funcion_8(string):
+    for patron in string:
+        return re.findall(patron, string)
 
-with open('nombreArchivo', 'r') as file:
-    print(file.readlines())
+print(funcion_8(string))
