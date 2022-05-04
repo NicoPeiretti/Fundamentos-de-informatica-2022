@@ -111,4 +111,16 @@ def funcion_13(string):
 string = '+++Que hace pibe'
 print(funcion_13(string))
 
+#Ejercicio 14:
+import re
+def funcion_14(string):
+    return re.sub(r'[\s]', ';', string)
+    
+funcion_14('hola  mi nombre es    Nicolas Peiretti')
+#Ejercicio 15:
+import re
+def validar_mail(mail):
+    return(bool(re.match(r"[a-zA-Z0-9]+[-_\.]*[a-zA-Z0-9]+@[a-z]{1,9}\.[a-z]{2,4}(\.[a-z]{2,4})*", mail)))
+
+print(validar_mail("nico.peiretti157@gmail.com")) 
 
