@@ -28,9 +28,12 @@ def read_n_back_lines(n, archivo):
     texto.close()
 
 # EJERCICIO 4: Hacé un programa que lea un archivo, cuente la cantidad de palabras del archivo y luego imprima el resultado.
-with open('nombreArchivo', 'r') as file: 
-    fileContent = file.readlines()
-    print(len(fileContent)) 
+def funcion_4(fileContent):
+    with open(fileContent, 'r') as file: 
+        fileContent = file.read()
+        print(len(fileContent)) 
+
+funcion_4('bio.txt')
 
 # EJERCICIO 5:Escribí un programa que lea un archivo, reemplace una letra por esa misma letra más un salto de línea y 
 # lo guarde en otro archivo.

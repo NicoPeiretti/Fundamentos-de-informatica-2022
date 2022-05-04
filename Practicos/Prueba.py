@@ -1,5 +1,10 @@
-def join_files(file1,file2,file3):
-    with open(file1,"r") as f1, open (file2,"r") as f2, open(file3,"a") as f3:
-        f3.write(f1.read() + f2.read())
+def funcion_5(fileContent, letra):
+    with open(fileContent, 'r') as file: 
+        fileContent = file.readlines()
+        for fileline in fileContent: 
+            fileline = fileline.replace(letra, letra + '\n')
+    with open(fileContent, 'a') as f: 
+        for i in fileContent:
+            f.write(i)
 
-join_files('nombreArchivo', 'bio.txt', 'manipulacion_archivos.txt')
+funcion_5('bio.txt', 'y')
